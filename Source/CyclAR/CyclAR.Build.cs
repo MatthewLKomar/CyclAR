@@ -7,8 +7,10 @@ public class CyclAR : ModuleRules
 	public CyclAR(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
-	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+
+		PublicIncludePaths.Add(ModuleDirectory);
+
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "UMG", "CommonUI" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
